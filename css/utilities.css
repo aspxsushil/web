@@ -1,4 +1,9 @@
 /* Text colors */
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin:0;
+}
 
 .text-primary{
     color: #28a745;
