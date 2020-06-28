@@ -205,12 +205,22 @@
     </div>
     <script>
         const navbar = document.getElementById('navbar');
+        var bounced = false;
          window.onscroll = function(){
              if(window.pageYOffset > 100){               
                 navbar.classList.remove('top');
+                if(!bounced){
+                    navbar.style.transform = 'translate(0px,-70px)'; // take navbar 70px up in yaxis form its  current position
+                }
+                setTimeout(function(){
+                        navbar.style.transform = 'translateY(0)'; // take navbar to its original position in yaxis from -70px;
+                        scrolled = true;
+                },200);
+               
              }
              else {
                  navbar.classList.add('top');
+                 scrolled = false;
              }
          }
     </script>
